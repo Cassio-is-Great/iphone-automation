@@ -1,0 +1,21 @@
+name: Auto Assign Issue to Project
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    branches:
+      - development
+env:
+  MY_GITHUB_TOKEN: ${{ secrets.AUTOMATE_ISSUES_PULL_REQUESTS }}
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    name: Assign to iPhone automation Project
+    steps:
+    - name: Assign NEW issues and pull request to project
+      uses: srggrs/assign-one-project-github-action@1.2.0
+      if: github.event.action == 'opened'
+      with:
+        project: 'https://github.com/Cassio-is-Great/iphone-automation/projects/1'
