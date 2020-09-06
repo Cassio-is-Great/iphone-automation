@@ -3,7 +3,7 @@
 Contains iPhone [Pythonista](http://omz-software.com/pythonista/docs/) scripts for iPhone automation.
 
 ## First Time Setup
-1. Set git remote head to developement: 
+1. Set git remote head to development: 
 ```bash
 git remote set-head origin development
 ```
