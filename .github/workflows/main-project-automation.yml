@@ -1,20 +1,18 @@
-name: Auto Assign Issue to Project
+name: "[A] Repo Project Main add on Issues/PRs"
 
 on:
   issues:
     types: [opened]
   pull_request:
-    branches:
-      - development
+    types: [opened, synchronize]
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 jobs:
   assign_one_project:
     runs-on: ubuntu-latest
-    name: Assign to iPhone automation Project
+    name: Assign to Main Repo Project
     steps:
-    - name: Assign NEW issues and pull request to project
+    - name: Assign issues and pull request to project
       uses: srggrs/assign-one-project-github-action@1.2.0
       if: github.event.action == 'opened'
       with:
