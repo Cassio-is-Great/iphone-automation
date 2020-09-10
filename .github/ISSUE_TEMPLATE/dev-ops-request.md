@@ -2,7 +2,7 @@
 name: Dev Ops Request
 about: Create a request for dev ops assistance
 title: "[DEV OPS]"
-labels: dev-ops
+labels: ''
 assignees: ''
 
 ---

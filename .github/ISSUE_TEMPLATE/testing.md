@@ -2,7 +2,7 @@
 name: Testing request
 about: Add testing procedure, either automated or manual
 title: "[TEST]"
-labels: testing
+labels: ''
 assignees: ''
 
 ---
